@@ -1,0 +1,19 @@
+FROM centos:centos8
+
+RUN yum update -y && \
+    yum install -y which && \
+    yum install -y gcc gcc-c++ make autoconf libtool libedit && \
+    yum install -y openssl-devel libxml2-devel boost-devel libcgroup-tools
+
+#WORKDIR /root
+#RUN curl -L -O https://github.com/adaptivecomputing/torque/archive/refs/tags/4.5.0-pre-1.tar.gz && \
+#    tar -zxvof 4.5.0-pre-1.tar.gz && \
+#    rm -rf 4.5.0-pre-1.tar.gz && \
+#    cd torque-4.5.0-pre-1 && \
+#    bash autogen.sh && \
+#    bash configure --prefix=/opt/torque && \
+#    make && \
+#    make install
+
+    
+#TODO update the path
